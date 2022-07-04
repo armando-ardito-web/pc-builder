@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('builds', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedBigInteger("owner");
             $table->foreign('owner')->references('id')->on('users')->onDelete('cascade'); 
             $table->boolean('is_private'); //se è privata gli utenti non autorizzati non possono vederlo 
             $table->longText('parts'); //sarà un json di cui definire la struttura

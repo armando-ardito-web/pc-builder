@@ -17,6 +17,7 @@ return new class extends Migration
             
             $table->bigIncrements('id'); //id
             $table->string('name'); //il nome del prodotto
+            $table->unsignedBigInteger("vendor_id"); //DICHIARARE PRIMA LA CHIAVE
             $table->foreign('vendor_id')->references('id')->on('vendors')->onDelete('cascade'); //fkey vendor del prodotto
             $table->date('release_date'); //data di rilascio del prodotto
             $table->integer('power_consumption'); //quanto consuma

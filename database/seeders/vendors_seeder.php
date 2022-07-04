@@ -18,7 +18,7 @@ class vendors_seeder extends Seeder
     public function run()
     {
         //
-        DB:tables('vendors')->insert([
+        DB::table('vendors')->insert([
             ['name'=>'Intel',
             'website'=> 'https://www.intel.com/'],
             ['name'=>'AMD',

@@ -28,3 +28,5 @@ Route::post('/login', [AuthController::class, 'login']);
 
 //debug cerca vendor, ma possibilmente mi servirà in futuro
 Route::post('/vendor-search', [VendorController::class, 'search']);
+
+Route::get('/vendor-search/{nome}', [VendorController::class, 'search']);
